@@ -21,6 +21,8 @@ YTM_CLIENT = {
     'gl': 'US'
 }
 
+_SEARCH_CACHE: Dict[str, List[Dict[str, Any]]] = {}
+
 def search_ytm(query: str, limit: int = 25) -> List[Dict[str, Any]]:
     """
     Searches YouTube Music for songs matching query.
@@ -30,6 +32,10 @@ def search_ytm(query: str, limit: int = 25) -> List[Dict[str, Any]]:
     """
     if not query or not query.strip():
         return []
+
+    q_key = query.strip().lower()
+    if q_key in _SEARCH_CACHE:
+        return _SEARCH_CACHE[q_key][:limit]
 
     url = 'https://music.youtube.com/youtubei/v1/search'
     body = {
@@ -132,6 +138,9 @@ def search_ytm(query: str, limit: int = 25) -> List[Dict[str, Any]]:
 
     except Exception as e:
         print(f"Error searching YouTube Music: {e}")
+
+    if results:
+        _SEARCH_CACHE[q_key] = results
 
     return results
 

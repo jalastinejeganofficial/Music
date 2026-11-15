@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
+import asyncio
 import uvicorn
 
 from scraper import (
@@ -51,7 +52,7 @@ async def get_home_music():
         return {"success": True, "tracks": _HOME_CACHE}
     
     try:
-        pl = scrape_playlist("PL4fGSI1pDJn6puJdseH2Rt9sMvt9E2M4i")
+        pl = await asyncio.to_thread(scrape_playlist, "PL4fGSI1pDJn6puJdseH2Rt9sMvt9E2M4i")
         tracks = pl.get("tracks", [])
         if tracks:
             _HOME_CACHE = tracks[:50]
@@ -60,7 +61,7 @@ async def get_home_music():
         print(f"Error loading home playlist: {e}")
 
     try:
-        results = search_ytm("Top Hits 2024", limit=30)
+        results = await asyncio.to_thread(search_ytm, "Top Hits 2024", 30)
         _HOME_CACHE = results
         return {"success": True, "tracks": results}
     except Exception as e:
@@ -70,7 +71,7 @@ async def get_home_music():
 async def search_endpoint(q: str = Query(..., min_length=1)):
     """Search for music on https://music.youtube.com/ with live query."""
     try:
-        results = search_ytm(q, limit=25)
+        results = await asyncio.to_thread(search_ytm, q, 25)
         return {"success": True, "query": q, "count": len(results), "results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -79,7 +80,7 @@ async def search_endpoint(q: str = Query(..., min_length=1)):
 async def stream_endpoint(video_id: str = Query(...)):
     """Extract direct playable audio streaming URL for a YouTube Music track."""
     try:
-        stream_url = get_audio_stream_url(video_id)
+        stream_url = await asyncio.to_thread(get_audio_stream_url, video_id)
         if stream_url:
             return {"success": True, "audio_url": stream_url}
         else:
@@ -102,7 +103,7 @@ async def import_spotify_endpoint(req: SpotifyImportRequest):
         raise HTTPException(status_code=400, detail="Spotify playlist URL or ID is required")
         
     try:
-        result = import_and_match_spotify_playlist(req.url.strip(), limit=req.limit)
+        result = await asyncio.to_thread(import_and_match_spotify_playlist, req.url.strip(), req.limit)
         return result
     except Exception as e:
         return JSONResponse(
