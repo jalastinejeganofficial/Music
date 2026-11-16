@@ -30,6 +30,34 @@ A full-stack web scraper and music player built with Python FastAPI and modern J
 
 ---
 
+## 💻 Desktop Software (Windows, Linux, macOS)
+
+Music is packaged as standalone desktop software for **Windows**, **Linux**, and **macOS**, featuring a native desktop application window (dark theme `#0a0a0a`, custom app icon, no background terminal window, and zero Python setup required for end users):
+
+- **🪟 Windows (`.exe` & Portable `.zip`):**
+  - **Executable:** `dist/Music/Music.exe`
+  - **Portable Distribution Zip:** `dist/Music-Windows-x64.zip`
+  - **Build Script:** Run [packaging/windows/build_windows.bat](packaging/windows/build_windows.bat) or [packaging/windows/create_portable_zip.py](packaging/windows/create_portable_zip.py)
+  - **Documentation:** See [packaging/windows/README_WINDOWS.md](packaging/windows/README_WINDOWS.md)
+
+- **🐧 Linux (`.AppImage`, Binary & `.desktop`):**
+  - **Standalone AppImage:** `dist/Music-x86_64.AppImage` (runs on Ubuntu, Debian, Fedora, Arch)
+  - **Desktop Integration:** [packaging/linux/music.desktop](packaging/linux/music.desktop)
+  - **Build Scripts:** [packaging/linux/build_linux.sh](packaging/linux/build_linux.sh) and [packaging/linux/build_appimage.sh](packaging/linux/build_appimage.sh)
+  - **Documentation:** See [packaging/linux/README_LINUX.md](packaging/linux/README_LINUX.md)
+
+- **🍎 macOS (`.app` Bundle & `.dmg` Installer):**
+  - **App Bundle:** `dist/Music.app` (Apple Silicon M1-M4 & Intel x86_64)
+  - **Drag-and-Drop Disk Image:** `dist/Music-macOS.dmg`
+  - **Bundle Manifest:** [packaging/macos/Info.plist](packaging/macos/Info.plist)
+  - **Build Script:** [packaging/macos/build_macos.sh](packaging/macos/build_macos.sh)
+  - **Documentation:** See [packaging/macos/README_MACOS.md](packaging/macos/README_MACOS.md)
+
+- **⚙️ Multi-Platform CI/CD Package Manager:**
+  - Automated GitHub Actions matrix workflow at [`.github/workflows/package-releases.yml`](.github/workflows/package-releases.yml) builds binaries for all 3 OS platforms on every GitHub release or tag.
+
+---
+
 ## 🛠️ How to Run
 
 1. **Install requirements:**

@@ -8,4 +8,8 @@ venv/
 .venv/
 *.log
 .DS_Store
+build/
+dist/
+*.egg-info/
 verify_api.py
+test_*.py

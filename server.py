@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
+import sys
 import asyncio
 import uvicorn
 
@@ -111,8 +112,13 @@ async def import_spotify_endpoint(req: SpotifyImportRequest):
             content={"success": False, "error": str(e), "message": "Failed to import Spotify playlist"}
         )
 
-# Static files
-STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
+# Static files (supports PyInstaller frozen packages)
+if getattr(sys, 'frozen', False):
+    BASE_DIR = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_DIR = os.path.join(BASE_DIR, "static")
 if not os.path.exists(STATIC_DIR):
     os.makedirs(STATIC_DIR, exist_ok=True)
 
