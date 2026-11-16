@@ -17,12 +17,17 @@ echo [2/3] Building standalone Windows executable...
 pyinstaller --noconfirm --clean Music.spec
 
 REM 3. Package output into a zip file for distribution
-echo [3/3] Creating portable distribution zip...
+echo [3/4] Creating portable distribution zip...
 python packaging\windows\create_portable_zip.py
+
+REM 4. Build Setup & Package Manager Executable
+echo [4/4] Building MusicSetup.exe Package Manager...
+pyinstaller --noconfirm --clean --onefile --noconsole --name MusicSetup --icon assets/icon.ico --add-data "assets;assets" packaging/windows/installer_app.py
 
 echo ========================================================
 echo   Build Successful!
 echo   Executable: dist\Music\Music.exe
+echo   Package Manager: dist\MusicSetup.exe
 echo   Zip Package: dist\Music-Windows-x64.zip
 echo ========================================================
 pause

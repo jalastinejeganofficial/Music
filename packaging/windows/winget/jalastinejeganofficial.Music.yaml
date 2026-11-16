@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.singleton.1.6.0.schema.json
+PackageIdentifier: jalastinejeganofficial.Music
+PackageVersion: 1.0.0
+PackageName: Music
+Publisher: Jalastine Jegan
+Author: Jalastine Jegan
+License: MIT
+ShortDescription: Full-stack YouTube Music desktop player with real-time lyrics and audio extraction.
+PackageUrl: https://github.com/jalastinejeganofficial/Music
+Installers:
+  - Architecture: x64
+    InstallerType: zip
+    InstallerUrl: https://github.com/jalastinejeganofficial/Music/releases/latest/download/Music-Windows-x64.zip
+    InstallerSha256: 0000000000000000000000000000000000000000000000000000000000000000
+    NestedInstallerType: portable
+    NestedInstallerFiles:
+      - RelativeFilePath: Music\Music.exe
+        PortableCommandAlias: music
+ManifestType: singleton
+ManifestVersion: 1.6.0

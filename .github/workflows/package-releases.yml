@@ -15,14 +15,11 @@ jobs:
       matrix:
         include:
           - os: windows-latest
-            artifact_name: Music-Windows-x64.zip
-            asset_name: Music-Windows-x64.zip
+            artifact_name: windows-packages
           - os: ubuntu-latest
             artifact_name: Music-Linux-x64.tar.gz
-            asset_name: Music-Linux-x64.tar.gz
           - os: macos-latest
             artifact_name: Music-macOS.zip
-            asset_name: Music-macOS.zip
 
     steps:
       - name: Checkout Code
@@ -40,12 +37,18 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller pywebview pillow
 
-      # --- WINDOWS BUILD ---
-      - name: Build Windows Executable
+      # --- WINDOWS BUILD & PACKAGE MANAGER ---
+      - name: Build Windows Executables & Package Manager
         if: runner.os == 'Windows'
         run: |
           pyinstaller --noconfirm --clean Music.spec
           python packaging/windows/create_portable_zip.py
+          pyinstaller --noconfirm --clean --onefile --noconsole --name MusicSetup --icon assets/icon.ico --add-data "assets;assets" packaging/windows/installer_app.py
+          if (Get-Command iscc -ErrorAction SilentlyContinue) {
+            iscc packaging/windows/Music_Installer.iss
+          } elseif (Test-Path "C:\Program Files (x86)\Inno Setup 6\iscc.exe") {
+            & "C:\Program Files (x86)\Inno Setup 6\iscc.exe" packaging/windows/Music_Installer.iss
+          }
 
       # --- LINUX BUILD ---
       - name: Install Linux System Libraries
@@ -76,16 +79,31 @@ jobs:
           zip -r Music-macOS.zip Music.app
 
       # --- UPLOAD ARTIFACTS ---
-      - name: Upload Build Artifact
+      - name: Upload Windows Artifacts
+        if: runner.os == 'Windows'
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.asset_name }}
+          name: Music-Windows-x64
+          path: |
+            dist/Music-Windows-x64.zip
+            dist/MusicSetup.exe
+            dist/Music-Setup-x64.exe
+
+      - name: Upload Linux/macOS Artifact
+        if: runner.os != 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact_name }}
           path: dist/${{ matrix.artifact_name }}
 
       - name: Release to GitHub Releases
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/${{ matrix.artifact_name }}
+          files: |
+            dist/*.zip
+            dist/*.tar.gz
+            dist/*.exe
+            dist/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
