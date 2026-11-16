@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music — Pure Sound. Zero Boundaries.</title>
+  <meta name="description" content="Experience Music: The high-fidelity full-stack desktop and web player. Engineered for zero latency, real-time synchronized karaoke lyrics, and instant stream resolution.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+  <!-- Ambient Background Canvas (Audio Reactive Waves) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navigation Bar (Apple Style Frosted Glass) -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/icon.png" alt="Music Logo" class="nav-logo">
+        <span class="nav-title">Music</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#animation-tech">Animations</a>
+        <a href="#download">Downloads</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary btn-sm">Get App</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="badge badge-pulse animate-on-scroll">
+          <span class="pulse-dot"></span> Full-Stack Native Desktop & Web
+        </div>
+        <h1 class="hero-headline animate-on-scroll delay-1">
+          Music.<br>
+          <span class="gradient-text">Pure Sound. Zero Latency.</span>
+        </h1>
+        <p class="hero-subhead animate-on-scroll delay-2">
+          Engineered with an asynchronous FastAPI backend and a hardware-accelerated Chromium shell. High-resolution artwork, real-time karaoke lyrics, and instant playlist import.
+        </p>
+        <div class="hero-cta-group animate-on-scroll delay-3">
+          <a href="#download" class="btn btn-primary btn-glow">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+            </svg>
+            Download for Windows
+          </a>
+          <a href="#features" class="btn btn-glass">Explore Features</a>
+        </div>
+      </div>
+
+      <!-- 3D FLOATING DEVICE SHOWCASE -->
+      <div class="hero-visual animate-on-scroll delay-3">
+        <div class="device-mockup" id="device-mockup">
+          <div class="device-header">
+            <div class="traffic-lights">
+              <span class="light red"></span>
+              <span class="light yellow"></span>
+              <span class="light green"></span>
+            </div>
+            <div class="device-title">Music — Now Playing</div>
+            <div class="device-status">
+              <span class="status-indicator"></span> 320 kbps Stream
+            </div>
+          </div>
+          <div class="device-screen">
+            <!-- Simulated Active Player UI -->
+            <div class="player-simulation">
+              <div class="sim-left">
+                <div class="vinyl-container" id="vinyl-turntable">
+                  <div class="vinyl-disc spinning">
+                    <div class="vinyl-groove"></div>
+                    <div class="vinyl-groove"></div>
+                    <div class="vinyl-label">
+                      <img src="assets/icon.png" alt="Album Art">
+                    </div>
+                  </div>
+                </div>
+                <div class="track-meta">
+                  <div class="track-title">Blinding Lights</div>
+                  <div class="track-artist">The Weeknd • After Hours</div>
+                </div>
+              </div>
+
+              <div class="sim-center">
+                <!-- Interactive Equalizer Bars -->
+                <div class="sound-visualizer" id="equalizer">
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                </div>
+                <!-- Scrubber Progress Bar -->
+                <div class="scrubber-container">
+                  <span class="time-current">1:42</span>
+                  <div class="scrubber-bar">
+                    <div class="scrubber-progress"></div>
+                    <div class="scrubber-handle"></div>
+                  </div>
+                  <span class="time-total">3:20</span>
+                </div>
+              </div>
+
+              <div class="sim-right">
+                <!-- Live Karaoke Lyrics Preview -->
+                <div class="lyrics-card">
+                  <div class="lyrics-header">Synchronized Lyrics</div>
+                  <div class="lyrics-line past">I look around and Sin City's cold and empty</div>
+                  <div class="lyrics-line past">No one's around to judge me</div>
+                  <div class="lyrics-line active">I can't see clearly when you're gone...</div>
+                  <div class="lyrics-line future">I said, ooh, I'm blinded by the lights</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEYNOTE SHOWCASE (Sticky Scroll Sequence) -->
+    <section class="keynote-section" id="overview">
+      <div class="keynote-container">
+        <div class="keynote-sticky">
+          <div class="keynote-pill">Precision Engineering</div>
+          <h2 class="keynote-title" id="keynote-title">Designed with zero compromises.</h2>
+          <p class="keynote-subtitle" id="keynote-subtitle">
+            Scroll to inspect the three pillars powering the architecture.
+          </p>
+
+          <div class="keynote-stage">
+            <!-- Stage Item 1 -->
+            <div class="stage-card active" data-stage="1">
+              <div class="stage-icon">⚡</div>
+              <div class="stage-info">
+                <h3>Asynchronous Stream Pipeline</h3>
+                <p>InnerTube WEB_REMIX integration coupled with yt-dlp extracting direct, bufferless 160kbps audio streams in under 240 milliseconds.</p>
+                <div class="stage-metric">
+                  <span class="metric-val">&lt; 240ms</span>
+                  <span class="metric-desc">Stream Resolution</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage Item 2 -->
+            <div class="stage-card" data-stage="2">
+              <div class="stage-icon">🎤</div>
+              <div class="stage-info">
+                <h3>Dual-Engine Karaoke Lyrics</h3>
+                <p>Sub-millisecond timestamped word alignment combining official YouTube browse tab payloads and LRCLIB real-time synchronization.</p>
+                <div class="stage-metric">
+                  <span class="metric-val">1ms</span>
+                  <span class="metric-desc">Scroll Accuracy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage Item 3 -->
+            <div class="stage-card" data-stage="3">
+              <div class="stage-icon">📦</div>
+              <div class="stage-info">
+                <h3>Unified Native Software</h3>
+                <p>Standalone MSI installer, portable executable, and automated cross-platform distribution without external Python dependencies.</p>
+                <div class="stage-metric">
+                  <span class="metric-val">3 Platforms</span>
+                  <span class="metric-desc">Windows, Linux, macOS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress dots -->
+          <div class="stage-nav">
+            <span class="stage-dot active" data-step="1"></span>
+            <span class="stage-dot" data-step="2"></span>
+            <span class="stage-dot" data-step="3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID (Apple Style Modular Capabilities) -->
+    <section class="bento-section" id="features">
+      <div class="section-header text-center">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Built for listeners who care about details.</h2>
+        <p class="section-desc">Every element was conceived from the ground up to eliminate clutter and elevate acoustic clarity.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Large feature -->
+        <div class="bento-card bento-span-2 bento-tilt">
+          <div class="bento-content">
+            <span class="bento-tag">Instant Discovery</span>
+            <h3>Universal Music Search</h3>
+            <p>Real-time fuzzy search queries the global YouTube Music library with live suggestions, high-res artwork previews, and instant queueing.</p>
+          </div>
+          <div class="bento-graphic search-graphic">
+            <div class="search-bar-mockup">
+              <span class="search-icon">🔍</span>
+              <span class="search-text-typing">The Weeknd - Blinding Lights</span>
+              <span class="search-spinner"></span>
+            </div>
+            <div class="search-result-chip">
+              <span class="chip-dot"></span> Found in 118ms
+            </div>
+          </div>
+          <div class="spotlight-overlay"></div>
+        </div>
+
+        <!-- Bento 2: Karaoke Lyrics -->
+        <div class="bento-card bento-tilt">
+          <div class="bento-content">
+            <span class="bento-tag">Sub-second Precision</span>
+            <h3>Live Karaoke Lyrics</h3>
+            <p>Interactive lyrics highlight smoothly in real-time. Click any line to seek the audio track instantly.</p>
+          </div>
+          <div class="bento-graphic lyrics-graphic">
+            <div class="audio-wave-bars">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="spotlight-overlay"></div>
+        </div>
+
+        <!-- Bento 3: Spotify Importer -->
+        <div class="bento-card bento-tilt">
+          <div class="bento-content">
+            <span class="bento-tag">Seamless Migration</span>
+            <h3>Spotify 1-Click Importer</h3>
+            <p>Paste any public Spotify playlist URL. The scraper maps every title and builds an instant playback queue.</p>
+          </div>
+          <div class="bento-graphic spotify-graphic">
+            <div class="spotify-badge">
+              <span class="spotify-icon">♫</span> Spotify Playlist &rarr; Music
+            </div>
+          </div>
+          <div class="spotlight-overlay"></div>
+        </div>
+
+        <!-- Bento 4: Zero Terminal Desktop Software -->
+        <div class="bento-card bento-span-2 bento-tilt">
+          <div class="bento-content">
+            <span class="bento-tag">Desktop Integration</span>
+            <h3>Windows MSI & Executable</h3>
+            <p>Installed directly to your PC with Windows native MSI package manager. Starts in a standalone hardware-accelerated dark window with zero background console prompts.</p>
+          </div>
+          <div class="bento-graphic os-graphic">
+            <div class="os-pill active">Windows 11 / 10 (.msi)</div>
+            <div class="os-pill">Linux (.AppImage)</div>
+            <div class="os-pill">macOS (.dmg)</div>
+          </div>
+          <div class="spotlight-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ACOUSTIC CANVAS SECTION -->
+    <section class="acoustic-section">
+      <div class="acoustic-content">
+        <span class="section-tag">Interactive Audio Synthesis</span>
+        <h2 class="section-title">Touch the Sound Waves.</h2>
+        <p class="section-desc">Move your cursor across the visualizer below to alter harmonic frequencies in real time.</p>
+      </div>
+      <div class="interactive-canvas-box">
+        <canvas id="interactive-wave-canvas"></canvas>
+        <div class="canvas-controls">
+          <button class="btn btn-sm btn-glass" id="wave-mode-btn">Switch Harmonic Mode</button>
+          <span class="wave-freq-readout" id="wave-freq">432.0 Hz</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANIMATION & FULL-STACK TECHNIQUES (Technical Deep Dive) -->
+    <section class="tech-deepdive-section" id="animation-tech">
+      <div class="section-header text-center">
+        <span class="section-tag">Under The Hood</span>
+        <h2 class="section-title">Techniques & Engineering Architecture</h2>
+        <p class="section-desc">How this Apple-grade website and the underlying full-stack application were created.</p>
+      </div>
+
+      <div class="tech-grid">
+        <!-- Technique 1 -->
+        <div class="tech-card animate-on-scroll">
+          <div class="tech-num">01</div>
+          <h3>Euler Spring Physics & 3D Tilt</h3>
+          <p>
+            Card tilt and cursor magnetic attraction are governed by damped harmonic oscillation physics ($F = -kx - c\dot{x}$). By applying continuous rotational matrices via <code>transform: perspective(1000px) rotateX() rotateY()</code>, interactions achieve fluid inertia without abrupt stops.
+          </p>
+          <div class="tech-code-snippet">
+            <code>transform: perspective(1000px) rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg));</code>
+          </div>
+        </div>
+
+        <!-- Technique 2 -->
+        <div class="tech-card animate-on-scroll delay-1">
+          <div class="tech-num">02</div>
+          <h3>IntersectionObserver Scroll Hysteresis</h3>
+          <p>
+            Viewport animations use high-performance <code>IntersectionObserver</code> with threshold hysteresis instead of layout-thrashing scroll listeners. Elements decouple animation logic from the main layout thread, maintaining a guaranteed 60+ FPS during velocity scrolling.
+          </p>
+          <div class="tech-code-snippet">
+            <code>new IntersectionObserver(cb, { threshold: [0.15, 0.5] });</code>
+          </div>
+        </div>
+
+        <!-- Technique 3 -->
+        <div class="tech-card animate-on-scroll delay-2">
+          <div class="tech-num">03</div>
+          <h3>Multi-Octave Sine Wave Synthesis</h3>
+          <p>
+            The background canvas generates continuous fluid acoustics using superposition of harmonic wave equations $y(x,t) = \sum A_i \sin(k_i x + \omega_i t)$. Cursor coordinates dynamically interpolate through frequency matrices, simulating viscous audio membranes.
+          </p>
+          <div class="tech-code-snippet">
+            <code>y = Math.sin(x * freq + time) * amplitude * damping;</code>
+          </div>
+        </div>
+
+        <!-- Technique 4 -->
+        <div class="tech-card animate-on-scroll delay-3">
+          <div class="tech-num">04</div>
+          <h3>Specular Spotlight Gradients</h3>
+          <p>
+            Bento cards dynamically compute bounding boxes and project high-order radial gradients matching pointer coordinates: <code>radial-gradient(400px circle at x y, rgba(255,255,255,0.08), transparent 80%)</code>, replicating Apple's signature specular glass reflection.
+          </p>
+          <div class="tech-code-snippet">
+            <code>mask-image: radial-gradient(circle at var(--mouse-x) var(--mouse-y), ...);</code>
+          </div>
+        </div>
+
+        <!-- Technique 5 -->
+        <div class="tech-card animate-on-scroll">
+          <div class="tech-num">05</div>
+          <h3>FastAPI Asynchronous Scraper Backend</h3>
+          <p>
+            The backend engine is engineered on Python 3.13 and FastAPI, leveraging asynchronous non-blocking I/O (`httpx` + `asyncio`) to parse InnerTube `WEB_REMIX` headers and extract high-speed `googlevideo.com` audio stream endpoints.
+          </p>
+          <div class="tech-code-snippet">
+            <code>async def stream(video_id: str): return await extract_stream(video_id)</code>
+          </div>
+        </div>
+
+        <!-- Technique 6 -->
+        <div class="tech-card animate-on-scroll delay-1">
+          <div class="tech-num">06</div>
+          <h3>Native Packaging (MSI, EXE, AppImage, DMG)</h3>
+          <p>
+            Packaged with WiX Toolset and PyInstaller into a clean single-window desktop executable. Custom stream redirections (`DummyStream`) prevent `.isatty()` crashes in headless mode, while GitHub Actions automates simultaneous builds for Windows, macOS, and Linux.
+          </p>
+          <div class="tech-code-snippet">
+            <code>candle.exe Music.wxs && light.exe -out dist/Music.msi</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD HUB (Platform Selector) -->
+    <section class="download-section" id="download">
+      <div class="download-container">
+        <div class="download-header text-center">
+          <span class="section-tag">Get Started</span>
+          <h2 class="section-title">Download Music. Free and Open Source.</h2>
+          <p class="section-desc">Select your operating system to download the standalone software or package installer.</p>
+        </div>
+
+        <div class="platform-tabs">
+          <button class="tab-btn active" data-platform="windows">🪟 Windows</button>
+          <button class="tab-btn" data-platform="linux">🐧 Linux</button>
+          <button class="tab-btn" data-platform="macos">🍎 macOS</button>
+        </div>
+
+        <div class="platform-content">
+          <!-- Windows Card -->
+          <div class="download-card active" id="pane-windows">
+            <div class="dl-card-header">
+              <div class="dl-badge">Windows 10 / 11 (64-bit)</div>
+              <h3>Native Windows Suite</h3>
+              <p>Choose between the automated Microsoft MSI installer, the standalone package manager, or the portable zip archive.</p>
+            </div>
+            <div class="dl-options-grid">
+              <a href="../dist/Music.msi" class="dl-option-box primary">
+                <div class="opt-tag">Recommended</div>
+                <div class="opt-name">Music.msi</div>
+                <div class="opt-desc">Windows Installer package. Sets up desktop icon, start menu, and auto-updates.</div>
+                <span class="btn btn-primary btn-sm">Download .MSI</span>
+              </a>
+              <a href="../dist/MusicSetup.exe" class="dl-option-box">
+                <div class="opt-tag">GUI Installer</div>
+                <div class="opt-name">MusicSetup.exe</div>
+                <div class="opt-desc">Single-file package manager. Auto-extracts and starts frontend & backend.</div>
+                <span class="btn btn-glass btn-sm">Download Setup</span>
+              </a>
+              <a href="../dist/Music-Windows-x64.zip" class="dl-option-box">
+                <div class="opt-tag">Portable</div>
+                <div class="opt-name">Music-Windows-x64.zip</div>
+                <div class="opt-desc">No installation required. Unzip anywhere and double-click Music.exe.</div>
+                <span class="btn btn-glass btn-sm">Download Zip</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Linux Card -->
+          <div class="download-card" id="pane-linux">
+            <div class="dl-card-header">
+              <div class="dl-badge">Universal Linux (x86_64)</div>
+              <h3>Linux Distribution Suite</h3>
+              <p>Compatible with Ubuntu, Debian, Fedora, Arch Linux, and Pop!_OS.</p>
+            </div>
+            <div class="linux-terminal-box">
+              <code>
+                # 1. Download AppImage<br>
+                wget https://github.com/jalastinejeganofficial/Music/releases/latest/download/Music-x86_64.AppImage<br><br>
+                # 2. Make executable & run<br>
+                chmod +x Music-x86_64.AppImage<br>
+                ./Music-x86_64.AppImage
+              </code>
+            </div>
+          </div>
+
+          <!-- macOS Card -->
+          <div class="download-card" id="pane-macos">
+            <div class="dl-card-header">
+              <div class="dl-badge">macOS Sonoma / Ventura / Monterey</div>
+              <h3>Apple Silicon & Intel</h3>
+              <p>Native app bundle packaged into a drag-and-drop disk image installer.</p>
+            </div>
+            <div class="mac-dmg-box">
+              <div class="dmg-dropzone">
+                <img src="assets/icon.png" class="dmg-icon" alt="Music App">
+                <span class="dmg-arrow">&rarr;</span>
+                <div class="dmg-folder-icon">Applications</div>
+              </div>
+              <p class="dmg-tip">Drag Music into your Applications folder. Built for M1/M2/M3/M4 & Intel Macs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- APPLE-STYLE MINIMALIST FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/icon.png" alt="Logo" class="footer-logo">
+          <span>Music</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/jalastinejeganofficial/Music" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/jalastinejeganofficial/Music/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="#overview">Architecture</a>
+          <a href="#animation-tech">Animations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 Jalastine Jegan. MIT Licensed Open Source Project.</p>
+        <p class="footer-specs">FastAPI • Python 3.13 • InnerTube • Edge Chromium • WiX MSI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animations.js"></script>
+</body>
+</html>
