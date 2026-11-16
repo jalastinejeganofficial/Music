@@ -4,9 +4,16 @@ Native desktop software for Windows 10 & Windows 11 (64-bit), bundling both the 
 
 ---
 
-### 📦 3 Easy Ways to Install & Run (Zero Python Required)
+### 📦 Installation & Setup Options (Zero Python Required)
 
-#### Option 1: Standalone Package Manager Installer (`MusicSetup.exe`)
+#### Option 1: Native Windows Installer (`Music.msi`) 🌟 (Recommended)
+1. Double-click **`dist\Music.msi`** (or install via `msiexec /i dist\Music.msi`).
+2. Windows Installer installs all software components natively to `%LOCALAPPDATA%\Programs\Music`.
+3. Automatically places a permanent **Desktop Shortcut with custom Music icon** directly on your desktop.
+4. Registers in Windows Start Menu and "Installed apps" for easy opening anytime.
+5. Double-click the desktop icon anytime to immediately launch both backend & frontend together!
+
+#### Option 2: Standalone Package Manager Installer (`MusicSetup.exe`)
 1. Run **`dist\MusicSetup.exe`**.
 2. Select options (Desktop Shortcut, Start Menu Shortcut, Auto-Launch).
 3. Click **Install & Launch 🚀**.

@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Music" Language="1033" Version="1.0.0.0" Manufacturer="Jalastine Jegan" UpgradeCode="a25eb944-71e8-4672-8f19-b7e61da0c9d1">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Music is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="AppIcon.ico" SourceFile="C:\Spotify_new_Music_Player\assets\icon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="AppIcon.ico" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/jalastinejeganofficial/Music" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="LocalAppDataFolder">
+        <Directory Id="ProgramsFolder" Name="Programs">
+          <Directory Id="INSTALLFOLDER" Name="Music">
+            <Component Id="CompRoot_1" Guid="9fdb3fb8-350d-5a44-800b-338cdc8a1622">
+              <File Id="FileRoot_1" Source="C:\Spotify_new_Music_Player\dist\Music\Music.exe" KeyPath="yes">
+                <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="Music" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon.ico" IconIndex="0" Advertise="yes" />
+                <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="Music" WorkingDirectory="INSTALLFOLDER" Icon="AppIcon.ico" IconIndex="0" Advertise="yes" />
+              </File>
+            </Component>
+            <Directory Id="Dir_1" Name="_internal">
+              <Component Id="CompSub_2" Guid="d0ca87a3-6733-5c7c-b461-a086c55d68dd">
+                <File Id="File_2" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\LIBBZ2.dll" />
+                <File Id="File_3" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\VCRUNTIME140.dll" />
+                <File Id="File_4" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\VCRUNTIME140_1.dll" />
+                <File Id="File_5" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_asyncio.pyd" />
+                <File Id="File_6" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_brotli.cp313-win_amd64.pyd" />
+                <File Id="File_7" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_bz2.pyd" />
+                <File Id="File_8" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_cffi_backend.cp313-win_amd64.pyd" />
+                <File Id="File_9" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_ctypes.pyd" />
+                <File Id="File_10" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_decimal.pyd" />
+                <File Id="File_11" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_elementtree.pyd" />
+                <File Id="File_12" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_hashlib.pyd" />
+                <File Id="File_13" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_lzma.pyd" />
+                <File Id="File_14" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_multiprocessing.pyd" />
+                <File Id="File_15" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_overlapped.pyd" />
+                <File Id="File_16" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_queue.pyd" />
+                <File Id="File_17" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_socket.pyd" />
+                <File Id="File_18" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_sqlite3.pyd" />
+                <File Id="File_19" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_ssl.pyd" />
+                <File Id="File_20" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_uuid.pyd" />
+                <File Id="File_21" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_wmi.pyd" />
+                <File Id="File_22" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\_zoneinfo.pyd" />
+                <File Id="File_23" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-console-l1-1-0.dll" />
+                <File Id="File_24" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-datetime-l1-1-0.dll" />
+                <File Id="File_25" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-debug-l1-1-0.dll" />
+                <File Id="File_26" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-errorhandling-l1-1-0.dll" />
+                <File Id="File_27" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-fibers-l1-1-0.dll" />
+                <File Id="File_28" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-file-l1-1-0.dll" />
+                <File Id="File_29" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-file-l1-2-0.dll" />
+                <File Id="File_30" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-file-l2-1-0.dll" />
+                <File Id="File_31" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-handle-l1-1-0.dll" />
+                <File Id="File_32" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-heap-l1-1-0.dll" />
+                <File Id="File_33" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-interlocked-l1-1-0.dll" />
+                <File Id="File_34" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-libraryloader-l1-1-0.dll" />
+                <File Id="File_35" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-localization-l1-2-0.dll" />
+                <File Id="File_36" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-memory-l1-1-0.dll" />
+                <File Id="File_37" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-namedpipe-l1-1-0.dll" />
+                <File Id="File_38" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-processenvironment-l1-1-0.dll" />
+                <File Id="File_39" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-processthreads-l1-1-0.dll" />
+                <File Id="File_40" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-processthreads-l1-1-1.dll" />
+                <File Id="File_41" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-profile-l1-1-0.dll" />
+                <File Id="File_42" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-rtlsupport-l1-1-0.dll" />
+                <File Id="File_43" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-string-l1-1-0.dll" />
+                <File Id="File_44" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-synch-l1-1-0.dll" />
+                <File Id="File_45" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-synch-l1-2-0.dll" />
+                <File Id="File_46" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-sysinfo-l1-1-0.dll" />
+                <File Id="File_47" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-timezone-l1-1-0.dll" />
+                <File Id="File_48" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-core-util-l1-1-0.dll" />
+                <File Id="File_49" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-conio-l1-1-0.dll" />
+                <File Id="File_50" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-convert-l1-1-0.dll" />
+                <File Id="File_51" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-environment-l1-1-0.dll" />
+                <File Id="File_52" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-filesystem-l1-1-0.dll" />
+                <File Id="File_53" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-heap-l1-1-0.dll" />
+                <File Id="File_54" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-locale-l1-1-0.dll" />
+                <File Id="File_55" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-math-l1-1-0.dll" />
+                <File Id="File_56" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-process-l1-1-0.dll" />
+                <File Id="File_57" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-runtime-l1-1-0.dll" />
+                <File Id="File_58" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-stdio-l1-1-0.dll" />
+                <File Id="File_59" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-string-l1-1-0.dll" />
+                <File Id="File_60" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-time-l1-1-0.dll" />
+                <File Id="File_61" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\api-ms-win-crt-utility-l1-1-0.dll" />
+                <File Id="File_62" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\base_library.zip" />
+                <File Id="File_63" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\ffi.dll" />
+                <File Id="File_64" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\libcrypto-3-x64.dll" />
+                <File Id="File_65" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\libexpat.dll" />
+                <File Id="File_66" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\liblzma.dll" />
+                <File Id="File_67" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\libmpdec-4.dll" />
+                <File Id="File_68" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\libssl-3-x64.dll" />
+                <File Id="File_69" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pyexpat.pyd" />
+                <File Id="File_70" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\python3.dll" />
+                <File Id="File_71" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\python313.dll" />
+                <File Id="File_72" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\select.pyd" />
+                <File Id="File_73" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\sqlite3.dll" />
+                <File Id="File_74" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\ucrtbase.dll" />
+                <File Id="File_75" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\unicodedata.pyd" />
+                <File Id="File_76" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\yaml.dll" />
+                <File Id="File_77" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\zlib.dll" />
+              </Component>
+              <Directory Id="Dir_2" Name="MarkupSafe-3.0.2.dist-info">
+                <Component Id="CompSub_78" Guid="696c7b11-eef8-5df0-983c-446aba95b3ba">
+                  <File Id="File_78" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\INSTALLER" />
+                  <File Id="File_79" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\LICENSE.txt" />
+                  <File Id="File_80" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\METADATA" />
+                  <File Id="File_81" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\RECORD" />
+                  <File Id="File_82" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\REQUESTED" />
+                  <File Id="File_83" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\WHEEL" />
+                  <File Id="File_84" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\direct_url.json" />
+                  <File Id="File_85" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\MarkupSafe-3.0.2.dist-info\top_level.txt" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_3" Name="assets">
+                <Component Id="CompSub_86" Guid="8b2f5b71-84e3-5318-b9e6-22070f32f009">
+                  <File Id="File_86" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\assets\icon.ico" />
+                  <File Id="File_87" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\assets\icon.png" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_4" Name="attrs-25.4.0.dist-info">
+                <Component Id="CompSub_88" Guid="9861e8e0-fc9a-5216-9953-b076965a0aaa">
+                  <File Id="File_88" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\INSTALLER" />
+                  <File Id="File_89" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\METADATA" />
+                  <File Id="File_90" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\RECORD" />
+                  <File Id="File_91" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\REQUESTED" />
+                  <File Id="File_92" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\WHEEL" />
+                  <File Id="File_93" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\direct_url.json" />
+                </Component>
+                <Directory Id="Dir_5" Name="licenses">
+                  <Component Id="CompSub_94" Guid="668108ef-4519-570a-886f-ac31f7c3ef7a">
+                    <File Id="File_94" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\attrs-25.4.0.dist-info\licenses\LICENSE" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_6" Name="bcrypt">
+                <Component Id="CompSub_95" Guid="0e622f07-5b4c-52a6-b251-24ff0a287734">
+                  <File Id="File_95" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\bcrypt\_bcrypt.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_7" Name="brotlicffi">
+                <Component Id="CompSub_96" Guid="b06326a8-7a6f-529c-b965-8a3f7a2948dc">
+                  <File Id="File_96" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\brotlicffi\_brotlicffi.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_8" Name="certifi">
+                <Component Id="CompSub_97" Guid="d02c1d2e-c77e-5ac8-9e42-8a7854f6feb5">
+                  <File Id="File_97" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\certifi\cacert.pem" />
+                  <File Id="File_98" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\certifi\py.typed" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_9" Name="charset_normalizer">
+                <Component Id="CompSub_99" Guid="5ebb2daa-393c-58a7-97d9-bc826231d4f0">
+                  <File Id="File_99" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\charset_normalizer\cd.cp313-win_amd64.pyd" />
+                  <File Id="File_100" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\charset_normalizer\md.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_10" Name="click-8.4.1.dist-info">
+                <Component Id="CompSub_101" Guid="d4e47a65-5de5-569d-8a21-168ff3f79dbf">
+                  <File Id="File_101" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\click-8.4.1.dist-info\INSTALLER" />
+                  <File Id="File_102" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\click-8.4.1.dist-info\METADATA" />
+                  <File Id="File_103" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\click-8.4.1.dist-info\RECORD" />
+                  <File Id="File_104" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\click-8.4.1.dist-info\WHEEL" />
+                </Component>
+                <Directory Id="Dir_11" Name="licenses">
+                  <Component Id="CompSub_105" Guid="dd526fce-2f00-58b7-9668-e941d4f7866f">
+                    <File Id="File_105" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\click-8.4.1.dist-info\licenses\LICENSE.txt" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_12" Name="cryptography">
+                <Directory Id="Dir_13" Name="hazmat">
+                  <Directory Id="Dir_14" Name="bindings">
+                    <Component Id="CompSub_106" Guid="ec1f8214-a0a6-5f5c-9275-daeeb7c7043b">
+                      <File Id="File_106" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography\hazmat\bindings\_rust.pyd" />
+                    </Component>
+                  </Directory>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_15" Name="cryptography-46.0.3.dist-info">
+                <Component Id="CompSub_107" Guid="f205e7a3-b579-5328-83b5-8660a75f66f1">
+                  <File Id="File_107" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\INSTALLER" />
+                  <File Id="File_108" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\METADATA" />
+                  <File Id="File_109" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\RECORD" />
+                  <File Id="File_110" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\REQUESTED" />
+                  <File Id="File_111" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\WHEEL" />
+                  <File Id="File_112" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\direct_url.json" />
+                </Component>
+                <Directory Id="Dir_16" Name="licenses">
+                  <Component Id="CompSub_113" Guid="c7ff85d6-926f-5ef5-b6e5-934b4188e046">
+                    <File Id="File_113" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE" />
+                    <File Id="File_114" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.APACHE" />
+                    <File Id="File_115" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.BSD" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_17" Name="httptools">
+                <Directory Id="Dir_18" Name="parser">
+                  <Component Id="CompSub_116" Guid="32a0549a-decf-547b-b033-24026856e21a">
+                    <File Id="File_116" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\httptools\parser\parser.cp313-win_amd64.pyd" />
+                    <File Id="File_117" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\httptools\parser\url_parser.cp313-win_amd64.pyd" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_19" Name="importlib_metadata-8.7.0.dist-info">
+                <Component Id="CompSub_118" Guid="ac7e66bb-71de-5f8d-972a-5c18a07ac727">
+                  <File Id="File_118" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\INSTALLER" />
+                  <File Id="File_119" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\METADATA" />
+                  <File Id="File_120" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\RECORD" />
+                  <File Id="File_121" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\REQUESTED" />
+                  <File Id="File_122" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\WHEEL" />
+                  <File Id="File_123" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\direct_url.json" />
+                  <File Id="File_124" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\top_level.txt" />
+                </Component>
+                <Directory Id="Dir_20" Name="licenses">
+                  <Component Id="CompSub_125" Guid="499cd841-0dd0-51ca-a46d-7301c5941ed6">
+                    <File Id="File_125" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\importlib_metadata-8.7.0.dist-info\licenses\LICENSE" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_21" Name="itsdangerous-2.2.0.dist-info">
+                <Component Id="CompSub_126" Guid="5ad48c23-e891-5327-84cc-9d6df2ff598f">
+                  <File Id="File_126" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\INSTALLER" />
+                  <File Id="File_127" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\LICENSE.txt" />
+                  <File Id="File_128" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\METADATA" />
+                  <File Id="File_129" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\RECORD" />
+                  <File Id="File_130" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\REQUESTED" />
+                  <File Id="File_131" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\WHEEL" />
+                  <File Id="File_132" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\itsdangerous-2.2.0.dist-info\direct_url.json" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_22" Name="lxml">
+                <Component Id="CompSub_133" Guid="97b7f60f-caf0-5643-b312-6450d43b4a17">
+                  <File Id="File_133" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\_elementpath.cp313-win_amd64.pyd" />
+                  <File Id="File_134" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\builder.cp313-win_amd64.pyd" />
+                  <File Id="File_135" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\etree.cp313-win_amd64.pyd" />
+                  <File Id="File_136" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\objectify.cp313-win_amd64.pyd" />
+                  <File Id="File_137" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\sax.cp313-win_amd64.pyd" />
+                </Component>
+                <Directory Id="Dir_23" Name="html">
+                  <Component Id="CompSub_138" Guid="5c7da0d4-1906-5b53-9b11-db75f95fadcc">
+                    <File Id="File_138" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\html\_difflib.cp313-win_amd64.pyd" />
+                    <File Id="File_139" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\html\diff.cp313-win_amd64.pyd" />
+                  </Component>
+                </Directory>
+                <Directory Id="Dir_24" Name="isoschematron">
+                  <Directory Id="Dir_25" Name="resources">
+                    <Directory Id="Dir_26" Name="rng">
+                      <Component Id="CompSub_140" Guid="925c2eff-631e-535b-ae43-8d6a1141c61a">
+                        <File Id="File_140" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\rng\iso-schematron.rng" />
+                      </Component>
+                    </Directory>
+                    <Directory Id="Dir_27" Name="xsl">
+                      <Component Id="CompSub_141" Guid="73b10fb8-c1e2-5882-958f-901a4b0b2ee6">
+                        <File Id="File_141" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\RNG2Schtrn.xsl" />
+                        <File Id="File_142" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\XSD2Schtrn.xsl" />
+                      </Component>
+                      <Directory Id="Dir_28" Name="iso-schematron-xslt1">
+                        <Component Id="CompSub_143" Guid="da24e415-9a1b-57d3-b971-bafa14a7ce3e">
+                          <File Id="File_143" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_abstract_expand.xsl" />
+                          <File Id="File_144" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_dsdl_include.xsl" />
+                          <File Id="File_145" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_message.xsl" />
+                          <File Id="File_146" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_skeleton_for_xslt1.xsl" />
+                          <File Id="File_147" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_svrl_for_xslt1.xsl" />
+                          <File Id="File_148" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\readme.txt" />
+                        </Component>
+                      </Directory>
+                    </Directory>
+                  </Directory>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_29" Name="markupsafe">
+                <Component Id="CompSub_149" Guid="36c1c260-8c84-58a8-b440-f691e37fa5cc">
+                  <File Id="File_149" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\markupsafe\_speedups.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_30" Name="mypy">
+                <Component Id="CompSub_150" Guid="e184c4b8-0bc3-5aae-b71a-cd757822f3c4">
+                  <File Id="File_150" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\__init__.cp313-win_amd64.pyd" />
+                  <File Id="File_151" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\applytype.cp313-win_amd64.pyd" />
+                  <File Id="File_152" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\argmap.cp313-win_amd64.pyd" />
+                  <File Id="File_153" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\binder.cp313-win_amd64.pyd" />
+                  <File Id="File_154" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checker.cp313-win_amd64.pyd" />
+                  <File Id="File_155" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checker_shared.cp313-win_amd64.pyd" />
+                  <File Id="File_156" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checker_state.cp313-win_amd64.pyd" />
+                  <File Id="File_157" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checkexpr.cp313-win_amd64.pyd" />
+                  <File Id="File_158" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checkmember.cp313-win_amd64.pyd" />
+                  <File Id="File_159" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checkpattern.cp313-win_amd64.pyd" />
+                  <File Id="File_160" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\checkstrformat.cp313-win_amd64.pyd" />
+                  <File Id="File_161" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\constant_fold.cp313-win_amd64.pyd" />
+                  <File Id="File_162" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\constraints.cp313-win_amd64.pyd" />
+                  <File Id="File_163" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\copytype.cp313-win_amd64.pyd" />
+                  <File Id="File_164" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\defaults.cp313-win_amd64.pyd" />
+                  <File Id="File_165" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\erasetype.cp313-win_amd64.pyd" />
+                  <File Id="File_166" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\error_formatter.cp313-win_amd64.pyd" />
+                  <File Id="File_167" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\errorcodes.cp313-win_amd64.pyd" />
+                  <File Id="File_168" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\errors.cp313-win_amd64.pyd" />
+                  <File Id="File_169" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\expandtype.cp313-win_amd64.pyd" />
+                  <File Id="File_170" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\exprtotype.cp313-win_amd64.pyd" />
+                  <File Id="File_171" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\fastparse.cp313-win_amd64.pyd" />
+                  <File Id="File_172" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\fixup.cp313-win_amd64.pyd" />
+                  <File Id="File_173" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\graph_utils.cp313-win_amd64.pyd" />
+                  <File Id="File_174" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\infer.cp313-win_amd64.pyd" />
+                  <File Id="File_175" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\join.cp313-win_amd64.pyd" />
+                  <File Id="File_176" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\literals.cp313-win_amd64.pyd" />
+                  <File Id="File_177" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\lookup.cp313-win_amd64.pyd" />
+                  <File Id="File_178" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\maptype.cp313-win_amd64.pyd" />
+                  <File Id="File_179" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\meet.cp313-win_amd64.pyd" />
+                  <File Id="File_180" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\message_registry.cp313-win_amd64.pyd" />
+                  <File Id="File_181" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\messages.cp313-win_amd64.pyd" />
+                  <File Id="File_182" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\mro.cp313-win_amd64.pyd" />
+                  <File Id="File_183" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\nodes.cp313-win_amd64.pyd" />
+                  <File Id="File_184" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\operators.cp313-win_amd64.pyd" />
+                  <File Id="File_185" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\options.cp313-win_amd64.pyd" />
+                  <File Id="File_186" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\parse.cp313-win_amd64.pyd" />
+                  <File Id="File_187" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\patterns.cp313-win_amd64.pyd" />
+                  <File Id="File_188" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\plugin.cp313-win_amd64.pyd" />
+                  <File Id="File_189" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\reachability.cp313-win_amd64.pyd" />
+                  <File Id="File_190" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\scope.cp313-win_amd64.pyd" />
+                  <File Id="File_191" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal.cp313-win_amd64.pyd" />
+                  <File Id="File_192" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal_enum.cp313-win_amd64.pyd" />
+                  <File Id="File_193" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal_namedtuple.cp313-win_amd64.pyd" />
+                  <File Id="File_194" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal_newtype.cp313-win_amd64.pyd" />
+                  <File Id="File_195" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal_shared.cp313-win_amd64.pyd" />
+                  <File Id="File_196" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\semanal_typeddict.cp313-win_amd64.pyd" />
+                  <File Id="File_197" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\sharedparse.cp313-win_amd64.pyd" />
+                  <File Id="File_198" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\solve.cp313-win_amd64.pyd" />
+                  <File Id="File_199" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\state.cp313-win_amd64.pyd" />
+                  <File Id="File_200" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\strconv.cp313-win_amd64.pyd" />
+                  <File Id="File_201" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\subtypes.cp313-win_amd64.pyd" />
+                  <File Id="File_202" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\traverser.cp313-win_amd64.pyd" />
+                  <File Id="File_203" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\treetransform.cp313-win_amd64.pyd" />
+                  <File Id="File_204" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\tvar_scope.cp313-win_amd64.pyd" />
+                  <File Id="File_205" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\type_visitor.cp313-win_amd64.pyd" />
+                  <File Id="File_206" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typeanal.cp313-win_amd64.pyd" />
+                  <File Id="File_207" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typeops.cp313-win_amd64.pyd" />
+                  <File Id="File_208" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\types.cp313-win_amd64.pyd" />
+                  <File Id="File_209" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\types_utils.cp313-win_amd64.pyd" />
+                  <File Id="File_210" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typestate.cp313-win_amd64.pyd" />
+                  <File Id="File_211" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typetraverser.cp313-win_amd64.pyd" />
+                  <File Id="File_212" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typevars.cp313-win_amd64.pyd" />
+                  <File Id="File_213" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\typevartuples.cp313-win_amd64.pyd" />
+                  <File Id="File_214" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\util.cp313-win_amd64.pyd" />
+                  <File Id="File_215" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\visitor.cp313-win_amd64.pyd" />
+                </Component>
+                <Directory Id="Dir_31" Name="plugins">
+                  <Component Id="CompSub_216" Guid="a6376436-5b3f-5745-83d4-8467be508512">
+                    <File Id="File_216" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\plugins\__init__.cp313-win_amd64.pyd" />
+                    <File Id="File_217" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\plugins\common.cp313-win_amd64.pyd" />
+                    <File Id="File_218" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\plugins\dataclasses.cp313-win_amd64.pyd" />
+                  </Component>
+                </Directory>
+                <Directory Id="Dir_32" Name="server">
+                  <Component Id="CompSub_219" Guid="7b4ab4e4-f70d-58e2-9e5a-9328159ac4ba">
+                    <File Id="File_219" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\server\__init__.cp313-win_amd64.pyd" />
+                    <File Id="File_220" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\mypy\server\trigger.cp313-win_amd64.pyd" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_33" Name="orjson">
+                <Component Id="CompSub_221" Guid="73bd563c-38d5-529f-808a-88671d5d734a">
+                  <File Id="File_221" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\orjson\orjson.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_34" Name="pydantic-2.12.4.dist-info">
+                <Component Id="CompSub_222" Guid="20959fba-e590-5804-a17a-c1c1546e2c7a">
+                  <File Id="File_222" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\INSTALLER" />
+                  <File Id="File_223" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\METADATA" />
+                  <File Id="File_224" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\RECORD" />
+                  <File Id="File_225" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\REQUESTED" />
+                  <File Id="File_226" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\WHEEL" />
+                  <File Id="File_227" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\direct_url.json" />
+                </Component>
+                <Directory Id="Dir_35" Name="licenses">
+                  <Component Id="CompSub_228" Guid="368c2eaa-2e4f-5dd5-8830-6095ebc8722a">
+                    <File Id="File_228" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic-2.12.4.dist-info\licenses\LICENSE" />
+                  </Component>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_36" Name="pydantic_core">
+                <Component Id="CompSub_229" Guid="ef891119-ec8b-58e7-abbe-f4f967f20a6a">
+                  <File Id="File_229" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pydantic_core\_pydantic_core.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_37" Name="pywin32_system32">
+                <Component Id="CompSub_230" Guid="f3ae66a2-dba2-5627-a5ae-0a98218e9f41">
+                  <File Id="File_230" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\pywin32_system32\pywintypes313.dll" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_38" Name="setuptools">
+                <Directory Id="Dir_39" Name="_vendor">
+                  <Directory Id="Dir_40" Name="jaraco">
+                    <Directory Id="Dir_41" Name="text">
+                      <Component Id="CompSub_231" Guid="3c611a98-3cf1-5913-99a0-f08e8b997b39">
+                        <File Id="File_231" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\setuptools\_vendor\jaraco\text\Lorem ipsum.txt" />
+                      </Component>
+                    </Directory>
+                  </Directory>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_42" Name="static">
+                <Component Id="CompSub_232" Guid="a19b6750-1af5-5086-8788-f1782594d118">
+                  <File Id="File_232" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\static\app.js" />
+                  <File Id="File_233" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\static\index.html" />
+                  <File Id="File_234" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\static\style.css" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_43" Name="tzdata">
+                <Component Id="CompSub_235" Guid="60b0e467-51d0-5a49-a249-52ad4cf0989e">
+                  <File Id="File_235" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zones" />
+                </Component>
+                <Directory Id="Dir_44" Name="zoneinfo">
+                  <Component Id="CompSub_236" Guid="d6f5bf61-5068-57df-b2f7-60882489f09a">
+                    <File Id="File_236" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\CET" />
+                    <File Id="File_237" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\CST6CDT" />
+                    <File Id="File_238" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Cuba" />
+                    <File Id="File_239" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\EET" />
+                    <File Id="File_240" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\EST" />
+                    <File Id="File_241" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\EST5EDT" />
+                    <File Id="File_242" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Egypt" />
+                    <File Id="File_243" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Eire" />
+                    <File Id="File_244" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Factory" />
+                    <File Id="File_245" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GB" />
+                    <File Id="File_246" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GB-Eire" />
+                    <File Id="File_247" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GMT" />
+                    <File Id="File_248" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GMT+0" />
+                    <File Id="File_249" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GMT-0" />
+                    <File Id="File_250" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\GMT0" />
+                    <File Id="File_251" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Greenwich" />
+                    <File Id="File_252" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\HST" />
+                    <File Id="File_253" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Hongkong" />
+                    <File Id="File_254" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Iceland" />
+                    <File Id="File_255" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Iran" />
+                    <File Id="File_256" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Israel" />
+                    <File Id="File_257" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Jamaica" />
+                    <File Id="File_258" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Japan" />
+                    <File Id="File_259" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Kwajalein" />
+                    <File Id="File_260" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Libya" />
+                    <File Id="File_261" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\MET" />
+                    <File Id="File_262" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\MST" />
+                    <File Id="File_263" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\MST7MDT" />
+                    <File Id="File_264" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\NZ" />
+                    <File Id="File_265" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\NZ-CHAT" />
+                    <File Id="File_266" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Navajo" />
+                    <File Id="File_267" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\PRC" />
+                    <File Id="File_268" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\PST8PDT" />
+                    <File Id="File_269" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Poland" />
+                    <File Id="File_270" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Portugal" />
+                    <File Id="File_271" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\ROC" />
+                    <File Id="File_272" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\ROK" />
+                    <File Id="File_273" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Singapore" />
+                    <File Id="File_274" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Turkey" />
+                    <File Id="File_275" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\UCT" />
+                    <File Id="File_276" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\UTC" />
+                    <File Id="File_277" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Universal" />
+                    <File Id="File_278" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\W-SU" />
+                    <File Id="File_279" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\WET" />
+                    <File Id="File_280" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Zulu" />
+                    <File Id="File_281" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\iso3166.tab" />
+                    <File Id="File_282" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\leapseconds" />
+                    <File Id="File_283" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\tzdata.zi" />
+                    <File Id="File_284" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\zone.tab" />
+                    <File Id="File_285" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\zone1970.tab" />
+                    <File Id="File_286" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\zonenow.tab" />
+                  </Component>
+                  <Directory Id="Dir_45" Name="Africa">
+                    <Component Id="CompSub_287" Guid="61c3dcff-ddd7-599e-93f3-8346c856167f">
+                      <File Id="File_287" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Abidjan" />
+                      <File Id="File_288" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Accra" />
+                      <File Id="File_289" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Addis_Ababa" />
+                      <File Id="File_290" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Algiers" />
+                      <File Id="File_291" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Asmara" />
+                      <File Id="File_292" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Asmera" />
+                      <File Id="File_293" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Bamako" />
+                      <File Id="File_294" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Bangui" />
+                      <File Id="File_295" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Banjul" />
+                      <File Id="File_296" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Bissau" />
+                      <File Id="File_297" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Blantyre" />
+                      <File Id="File_298" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Brazzaville" />
+                      <File Id="File_299" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Bujumbura" />
+                      <File Id="File_300" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Cairo" />
+                      <File Id="File_301" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Casablanca" />
+                      <File Id="File_302" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Ceuta" />
+                      <File Id="File_303" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Conakry" />
+                      <File Id="File_304" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Dakar" />
+                      <File Id="File_305" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Dar_es_Salaam" />
+                      <File Id="File_306" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Djibouti" />
+                      <File Id="File_307" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Douala" />
+                      <File Id="File_308" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\El_Aaiun" />
+                      <File Id="File_309" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Freetown" />
+                      <File Id="File_310" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Gaborone" />
+                      <File Id="File_311" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Harare" />
+                      <File Id="File_312" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Johannesburg" />
+                      <File Id="File_313" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Juba" />
+                      <File Id="File_314" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Kampala" />
+                      <File Id="File_315" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Khartoum" />
+                      <File Id="File_316" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Kigali" />
+                      <File Id="File_317" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Kinshasa" />
+                      <File Id="File_318" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Lagos" />
+                      <File Id="File_319" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Libreville" />
+                      <File Id="File_320" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Lome" />
+                      <File Id="File_321" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Luanda" />
+                      <File Id="File_322" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Lubumbashi" />
+                      <File Id="File_323" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Lusaka" />
+                      <File Id="File_324" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Malabo" />
+                      <File Id="File_325" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Maputo" />
+                      <File Id="File_326" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Maseru" />
+                      <File Id="File_327" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Mbabane" />
+                      <File Id="File_328" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Mogadishu" />
+                      <File Id="File_329" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Monrovia" />
+                      <File Id="File_330" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Nairobi" />
+                      <File Id="File_331" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Ndjamena" />
+                      <File Id="File_332" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Niamey" />
+                      <File Id="File_333" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Nouakchott" />
+                      <File Id="File_334" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Ouagadougou" />
+                      <File Id="File_335" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Porto-Novo" />
+                      <File Id="File_336" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Sao_Tome" />
+                      <File Id="File_337" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Timbuktu" />
+                      <File Id="File_338" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Tripoli" />
+                      <File Id="File_339" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Tunis" />
+                      <File Id="File_340" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Africa\Windhoek" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_46" Name="America">
+                    <Component Id="CompSub_341" Guid="a3beaebe-3009-5516-9cf0-6aaeba3da781">
+                      <File Id="File_341" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Adak" />
+                      <File Id="File_342" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Anchorage" />
+                      <File Id="File_343" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Anguilla" />
+                      <File Id="File_344" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Antigua" />
+                      <File Id="File_345" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Araguaina" />
+                      <File Id="File_346" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Aruba" />
+                      <File Id="File_347" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Asuncion" />
+                      <File Id="File_348" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Atikokan" />
+                      <File Id="File_349" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Atka" />
+                      <File Id="File_350" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Bahia" />
+                      <File Id="File_351" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Bahia_Banderas" />
+                      <File Id="File_352" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Barbados" />
+                      <File Id="File_353" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Belem" />
+                      <File Id="File_354" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Belize" />
+                      <File Id="File_355" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Blanc-Sablon" />
+                      <File Id="File_356" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Boa_Vista" />
+                      <File Id="File_357" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Bogota" />
+                      <File Id="File_358" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Boise" />
+                      <File Id="File_359" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Buenos_Aires" />
+                      <File Id="File_360" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cambridge_Bay" />
+                      <File Id="File_361" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Campo_Grande" />
+                      <File Id="File_362" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cancun" />
+                      <File Id="File_363" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Caracas" />
+                      <File Id="File_364" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Catamarca" />
+                      <File Id="File_365" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cayenne" />
+                      <File Id="File_366" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cayman" />
+                      <File Id="File_367" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Chicago" />
+                      <File Id="File_368" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Chihuahua" />
+                      <File Id="File_369" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Ciudad_Juarez" />
+                      <File Id="File_370" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Coral_Harbour" />
+                      <File Id="File_371" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cordoba" />
+                      <File Id="File_372" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Costa_Rica" />
+                      <File Id="File_373" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Coyhaique" />
+                      <File Id="File_374" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Creston" />
+                      <File Id="File_375" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Cuiaba" />
+                      <File Id="File_376" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Curacao" />
+                      <File Id="File_377" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Danmarkshavn" />
+                      <File Id="File_378" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Dawson" />
+                      <File Id="File_379" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Dawson_Creek" />
+                      <File Id="File_380" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Denver" />
+                      <File Id="File_381" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Detroit" />
+                      <File Id="File_382" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Dominica" />
+                      <File Id="File_383" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Edmonton" />
+                      <File Id="File_384" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Eirunepe" />
+                      <File Id="File_385" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\El_Salvador" />
+                      <File Id="File_386" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Ensenada" />
+                      <File Id="File_387" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Fort_Nelson" />
+                      <File Id="File_388" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Fort_Wayne" />
+                      <File Id="File_389" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Fortaleza" />
+                      <File Id="File_390" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Glace_Bay" />
+                      <File Id="File_391" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Godthab" />
+                      <File Id="File_392" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Goose_Bay" />
+                      <File Id="File_393" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Grand_Turk" />
+                      <File Id="File_394" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Grenada" />
+                      <File Id="File_395" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Guadeloupe" />
+                      <File Id="File_396" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Guatemala" />
+                      <File Id="File_397" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Guayaquil" />
+                      <File Id="File_398" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Guyana" />
+                      <File Id="File_399" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Halifax" />
+                      <File Id="File_400" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Havana" />
+                      <File Id="File_401" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Hermosillo" />
+                      <File Id="File_402" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indianapolis" />
+                      <File Id="File_403" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Inuvik" />
+                      <File Id="File_404" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Iqaluit" />
+                      <File Id="File_405" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Jamaica" />
+                      <File Id="File_406" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Jujuy" />
+                      <File Id="File_407" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Juneau" />
+                      <File Id="File_408" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Knox_IN" />
+                      <File Id="File_409" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Kralendijk" />
+                      <File Id="File_410" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\La_Paz" />
+                      <File Id="File_411" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Lima" />
+                      <File Id="File_412" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Los_Angeles" />
+                      <File Id="File_413" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Louisville" />
+                      <File Id="File_414" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Lower_Princes" />
+                      <File Id="File_415" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Maceio" />
+                      <File Id="File_416" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Managua" />
+                      <File Id="File_417" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Manaus" />
+                      <File Id="File_418" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Marigot" />
+                      <File Id="File_419" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Martinique" />
+                      <File Id="File_420" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Matamoros" />
+                      <File Id="File_421" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Mazatlan" />
+                      <File Id="File_422" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Mendoza" />
+                      <File Id="File_423" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Menominee" />
+                      <File Id="File_424" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Merida" />
+                      <File Id="File_425" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Metlakatla" />
+                      <File Id="File_426" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Mexico_City" />
+                      <File Id="File_427" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Miquelon" />
+                      <File Id="File_428" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Moncton" />
+                      <File Id="File_429" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Monterrey" />
+                      <File Id="File_430" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Montevideo" />
+                      <File Id="File_431" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Montreal" />
+                      <File Id="File_432" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Montserrat" />
+                      <File Id="File_433" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Nassau" />
+                      <File Id="File_434" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\New_York" />
+                      <File Id="File_435" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Nipigon" />
+                      <File Id="File_436" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Nome" />
+                      <File Id="File_437" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Noronha" />
+                      <File Id="File_438" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Nuuk" />
+                      <File Id="File_439" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Ojinaga" />
+                      <File Id="File_440" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Panama" />
+                      <File Id="File_441" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Pangnirtung" />
+                      <File Id="File_442" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Paramaribo" />
+                      <File Id="File_443" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Phoenix" />
+                      <File Id="File_444" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Port-au-Prince" />
+                      <File Id="File_445" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Port_of_Spain" />
+                      <File Id="File_446" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Porto_Acre" />
+                      <File Id="File_447" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Porto_Velho" />
+                      <File Id="File_448" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Puerto_Rico" />
+                      <File Id="File_449" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Punta_Arenas" />
+                      <File Id="File_450" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Rainy_River" />
+                      <File Id="File_451" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Rankin_Inlet" />
+                      <File Id="File_452" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Recife" />
+                      <File Id="File_453" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Regina" />
+                      <File Id="File_454" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Resolute" />
+                      <File Id="File_455" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Rio_Branco" />
+                      <File Id="File_456" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Rosario" />
+                      <File Id="File_457" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Santa_Isabel" />
+                      <File Id="File_458" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Santarem" />
+                      <File Id="File_459" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Santiago" />
+                      <File Id="File_460" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Santo_Domingo" />
+                      <File Id="File_461" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Sao_Paulo" />
+                      <File Id="File_462" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Scoresbysund" />
+                      <File Id="File_463" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Shiprock" />
+                      <File Id="File_464" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Sitka" />
+                      <File Id="File_465" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Barthelemy" />
+                      <File Id="File_466" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Johns" />
+                      <File Id="File_467" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Kitts" />
+                      <File Id="File_468" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Lucia" />
+                      <File Id="File_469" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Thomas" />
+                      <File Id="File_470" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\St_Vincent" />
+                      <File Id="File_471" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Swift_Current" />
+                      <File Id="File_472" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Tegucigalpa" />
+                      <File Id="File_473" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Thule" />
+                      <File Id="File_474" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Thunder_Bay" />
+                      <File Id="File_475" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Tijuana" />
+                      <File Id="File_476" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Toronto" />
+                      <File Id="File_477" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Tortola" />
+                      <File Id="File_478" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Vancouver" />
+                      <File Id="File_479" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Virgin" />
+                      <File Id="File_480" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Whitehorse" />
+                      <File Id="File_481" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Winnipeg" />
+                      <File Id="File_482" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Yakutat" />
+                      <File Id="File_483" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Yellowknife" />
+                    </Component>
+                    <Directory Id="Dir_47" Name="Argentina">
+                      <Component Id="CompSub_484" Guid="8c5a694f-51ef-5738-8942-d5b8a0614890">
+                        <File Id="File_484" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Buenos_Aires" />
+                        <File Id="File_485" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Catamarca" />
+                        <File Id="File_486" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\ComodRivadavia" />
+                        <File Id="File_487" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Cordoba" />
+                        <File Id="File_488" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Jujuy" />
+                        <File Id="File_489" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\La_Rioja" />
+                        <File Id="File_490" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Mendoza" />
+                        <File Id="File_491" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Rio_Gallegos" />
+                        <File Id="File_492" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Salta" />
+                        <File Id="File_493" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\San_Juan" />
+                        <File Id="File_494" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\San_Luis" />
+                        <File Id="File_495" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Tucuman" />
+                        <File Id="File_496" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Argentina\Ushuaia" />
+                      </Component>
+                    </Directory>
+                    <Directory Id="Dir_48" Name="Indiana">
+                      <Component Id="CompSub_497" Guid="d7c48be4-19c1-591d-8294-1ccc075daf1f">
+                        <File Id="File_497" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Indianapolis" />
+                        <File Id="File_498" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Knox" />
+                        <File Id="File_499" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Marengo" />
+                        <File Id="File_500" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Petersburg" />
+                        <File Id="File_501" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Tell_City" />
+                        <File Id="File_502" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Vevay" />
+                        <File Id="File_503" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Vincennes" />
+                        <File Id="File_504" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Indiana\Winamac" />
+                      </Component>
+                    </Directory>
+                    <Directory Id="Dir_49" Name="Kentucky">
+                      <Component Id="CompSub_505" Guid="5464bfc8-09b2-57e9-80cc-1b7148a65161">
+                        <File Id="File_505" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Kentucky\Louisville" />
+                        <File Id="File_506" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\Kentucky\Monticello" />
+                      </Component>
+                    </Directory>
+                    <Directory Id="Dir_50" Name="North_Dakota">
+                      <Component Id="CompSub_507" Guid="c745fcfe-1ef7-5513-9a77-23b417bcc9ab">
+                        <File Id="File_507" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\North_Dakota\Beulah" />
+                        <File Id="File_508" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\North_Dakota\Center" />
+                        <File Id="File_509" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\America\North_Dakota\New_Salem" />
+                      </Component>
+                    </Directory>
+                  </Directory>
+                  <Directory Id="Dir_51" Name="Antarctica">
+                    <Component Id="CompSub_510" Guid="e5882fe9-708d-5b82-894c-f99acb4ab48d">
+                      <File Id="File_510" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Casey" />
+                      <File Id="File_511" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Davis" />
+                      <File Id="File_512" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\DumontDUrville" />
+                      <File Id="File_513" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Macquarie" />
+                      <File Id="File_514" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Mawson" />
+                      <File Id="File_515" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\McMurdo" />
+                      <File Id="File_516" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Palmer" />
+                      <File Id="File_517" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Rothera" />
+                      <File Id="File_518" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\South_Pole" />
+                      <File Id="File_519" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Syowa" />
+                      <File Id="File_520" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Troll" />
+                      <File Id="File_521" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Antarctica\Vostok" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_52" Name="Arctic">
+                    <Component Id="CompSub_522" Guid="fb090633-2e58-54a9-a9df-6047c139041a">
+                      <File Id="File_522" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Arctic\Longyearbyen" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_53" Name="Asia">
+                    <Component Id="CompSub_523" Guid="d6e3241d-2573-5d9d-9721-53eaab2b4775">
+                      <File Id="File_523" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Aden" />
+                      <File Id="File_524" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Almaty" />
+                      <File Id="File_525" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Amman" />
+                      <File Id="File_526" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Anadyr" />
+                      <File Id="File_527" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Aqtau" />
+                      <File Id="File_528" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Aqtobe" />
+                      <File Id="File_529" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ashgabat" />
+                      <File Id="File_530" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ashkhabad" />
+                      <File Id="File_531" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Atyrau" />
+                      <File Id="File_532" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Baghdad" />
+                      <File Id="File_533" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Bahrain" />
+                      <File Id="File_534" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Baku" />
+                      <File Id="File_535" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Bangkok" />
+                      <File Id="File_536" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Barnaul" />
+                      <File Id="File_537" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Beirut" />
+                      <File Id="File_538" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Bishkek" />
+                      <File Id="File_539" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Brunei" />
+                      <File Id="File_540" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Calcutta" />
+                      <File Id="File_541" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Chita" />
+                      <File Id="File_542" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Choibalsan" />
+                      <File Id="File_543" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Chongqing" />
+                      <File Id="File_544" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Chungking" />
+                      <File Id="File_545" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Colombo" />
+                      <File Id="File_546" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Dacca" />
+                      <File Id="File_547" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Damascus" />
+                      <File Id="File_548" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Dhaka" />
+                      <File Id="File_549" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Dili" />
+                      <File Id="File_550" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Dubai" />
+                      <File Id="File_551" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Dushanbe" />
+                      <File Id="File_552" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Famagusta" />
+                      <File Id="File_553" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Gaza" />
+                      <File Id="File_554" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Harbin" />
+                      <File Id="File_555" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Hebron" />
+                      <File Id="File_556" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ho_Chi_Minh" />
+                      <File Id="File_557" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Hong_Kong" />
+                      <File Id="File_558" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Hovd" />
+                      <File Id="File_559" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Irkutsk" />
+                      <File Id="File_560" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Istanbul" />
+                      <File Id="File_561" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Jakarta" />
+                      <File Id="File_562" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Jayapura" />
+                      <File Id="File_563" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Jerusalem" />
+                      <File Id="File_564" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kabul" />
+                      <File Id="File_565" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kamchatka" />
+                      <File Id="File_566" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Karachi" />
+                      <File Id="File_567" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kashgar" />
+                      <File Id="File_568" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kathmandu" />
+                      <File Id="File_569" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Katmandu" />
+                      <File Id="File_570" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Khandyga" />
+                      <File Id="File_571" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kolkata" />
+                      <File Id="File_572" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Krasnoyarsk" />
+                      <File Id="File_573" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kuala_Lumpur" />
+                      <File Id="File_574" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kuching" />
+                      <File Id="File_575" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Kuwait" />
+                      <File Id="File_576" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Macao" />
+                      <File Id="File_577" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Macau" />
+                      <File Id="File_578" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Magadan" />
+                      <File Id="File_579" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Makassar" />
+                      <File Id="File_580" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Manila" />
+                      <File Id="File_581" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Muscat" />
+                      <File Id="File_582" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Nicosia" />
+                      <File Id="File_583" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Novokuznetsk" />
+                      <File Id="File_584" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Novosibirsk" />
+                      <File Id="File_585" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Omsk" />
+                      <File Id="File_586" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Oral" />
+                      <File Id="File_587" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Phnom_Penh" />
+                      <File Id="File_588" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Pontianak" />
+                      <File Id="File_589" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Pyongyang" />
+                      <File Id="File_590" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Qatar" />
+                      <File Id="File_591" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Qostanay" />
+                      <File Id="File_592" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Qyzylorda" />
+                      <File Id="File_593" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Rangoon" />
+                      <File Id="File_594" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Riyadh" />
+                      <File Id="File_595" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Saigon" />
+                      <File Id="File_596" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Sakhalin" />
+                      <File Id="File_597" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Samarkand" />
+                      <File Id="File_598" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Seoul" />
+                      <File Id="File_599" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Shanghai" />
+                      <File Id="File_600" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Singapore" />
+                      <File Id="File_601" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Srednekolymsk" />
+                      <File Id="File_602" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Taipei" />
+                      <File Id="File_603" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tashkent" />
+                      <File Id="File_604" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tbilisi" />
+                      <File Id="File_605" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tehran" />
+                      <File Id="File_606" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tel_Aviv" />
+                      <File Id="File_607" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Thimbu" />
+                      <File Id="File_608" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Thimphu" />
+                      <File Id="File_609" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tokyo" />
+                      <File Id="File_610" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Tomsk" />
+                      <File Id="File_611" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ujung_Pandang" />
+                      <File Id="File_612" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ulaanbaatar" />
+                      <File Id="File_613" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ulan_Bator" />
+                      <File Id="File_614" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Urumqi" />
+                      <File Id="File_615" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Ust-Nera" />
+                      <File Id="File_616" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Vientiane" />
+                      <File Id="File_617" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Vladivostok" />
+                      <File Id="File_618" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Yakutsk" />
+                      <File Id="File_619" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Yangon" />
+                      <File Id="File_620" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Yekaterinburg" />
+                      <File Id="File_621" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Asia\Yerevan" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_54" Name="Atlantic">
+                    <Component Id="CompSub_622" Guid="f25abba9-90ff-5833-98db-7180fbbcf26f">
+                      <File Id="File_622" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Azores" />
+                      <File Id="File_623" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Bermuda" />
+                      <File Id="File_624" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Canary" />
+                      <File Id="File_625" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Cape_Verde" />
+                      <File Id="File_626" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Faeroe" />
+                      <File Id="File_627" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Faroe" />
+                      <File Id="File_628" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Jan_Mayen" />
+                      <File Id="File_629" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Madeira" />
+                      <File Id="File_630" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Reykjavik" />
+                      <File Id="File_631" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\South_Georgia" />
+                      <File Id="File_632" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\St_Helena" />
+                      <File Id="File_633" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Atlantic\Stanley" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_55" Name="Australia">
+                    <Component Id="CompSub_634" Guid="65896aed-2084-5a99-ba98-cb008bfabc8f">
+                      <File Id="File_634" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\ACT" />
+                      <File Id="File_635" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Adelaide" />
+                      <File Id="File_636" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Brisbane" />
+                      <File Id="File_637" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Broken_Hill" />
+                      <File Id="File_638" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Canberra" />
+                      <File Id="File_639" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Currie" />
+                      <File Id="File_640" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Darwin" />
+                      <File Id="File_641" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Eucla" />
+                      <File Id="File_642" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Hobart" />
+                      <File Id="File_643" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\LHI" />
+                      <File Id="File_644" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Lindeman" />
+                      <File Id="File_645" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Lord_Howe" />
+                      <File Id="File_646" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Melbourne" />
+                      <File Id="File_647" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\NSW" />
+                      <File Id="File_648" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\North" />
+                      <File Id="File_649" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Perth" />
+                      <File Id="File_650" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Queensland" />
+                      <File Id="File_651" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\South" />
+                      <File Id="File_652" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Sydney" />
+                      <File Id="File_653" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Tasmania" />
+                      <File Id="File_654" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Victoria" />
+                      <File Id="File_655" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\West" />
+                      <File Id="File_656" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Australia\Yancowinna" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_56" Name="Brazil">
+                    <Component Id="CompSub_657" Guid="df307df1-e9b8-595e-a9cc-6aceb5708a2c">
+                      <File Id="File_657" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Brazil\Acre" />
+                      <File Id="File_658" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Brazil\DeNoronha" />
+                      <File Id="File_659" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Brazil\East" />
+                      <File Id="File_660" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Brazil\West" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_57" Name="Canada">
+                    <Component Id="CompSub_661" Guid="f1eec14b-cc9a-58ab-811a-837cd536ce45">
+                      <File Id="File_661" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Atlantic" />
+                      <File Id="File_662" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Central" />
+                      <File Id="File_663" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Eastern" />
+                      <File Id="File_664" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Mountain" />
+                      <File Id="File_665" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Newfoundland" />
+                      <File Id="File_666" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Pacific" />
+                      <File Id="File_667" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Saskatchewan" />
+                      <File Id="File_668" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Canada\Yukon" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_58" Name="Chile">
+                    <Component Id="CompSub_669" Guid="c0803c3d-4401-5408-bdcd-e10587ccdf4e">
+                      <File Id="File_669" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Chile\Continental" />
+                      <File Id="File_670" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Chile\EasterIsland" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_59" Name="Etc">
+                    <Component Id="CompSub_671" Guid="3a852f00-4be9-537d-a0ee-ce2c0136de89">
+                      <File Id="File_671" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT" />
+                      <File Id="File_672" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+0" />
+                      <File Id="File_673" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+1" />
+                      <File Id="File_674" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+10" />
+                      <File Id="File_675" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+11" />
+                      <File Id="File_676" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+12" />
+                      <File Id="File_677" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+2" />
+                      <File Id="File_678" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+3" />
+                      <File Id="File_679" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+4" />
+                      <File Id="File_680" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+5" />
+                      <File Id="File_681" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+6" />
+                      <File Id="File_682" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+7" />
+                      <File Id="File_683" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+8" />
+                      <File Id="File_684" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT+9" />
+                      <File Id="File_685" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-0" />
+                      <File Id="File_686" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-1" />
+                      <File Id="File_687" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-10" />
+                      <File Id="File_688" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-11" />
+                      <File Id="File_689" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-12" />
+                      <File Id="File_690" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-13" />
+                      <File Id="File_691" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-14" />
+                      <File Id="File_692" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-2" />
+                      <File Id="File_693" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-3" />
+                      <File Id="File_694" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-4" />
+                      <File Id="File_695" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-5" />
+                      <File Id="File_696" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-6" />
+                      <File Id="File_697" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-7" />
+                      <File Id="File_698" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-8" />
+                      <File Id="File_699" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT-9" />
+                      <File Id="File_700" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\GMT0" />
+                      <File Id="File_701" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\Greenwich" />
+                      <File Id="File_702" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\UCT" />
+                      <File Id="File_703" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\UTC" />
+                      <File Id="File_704" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\Universal" />
+                      <File Id="File_705" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Etc\Zulu" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_60" Name="Europe">
+                    <Component Id="CompSub_706" Guid="c4ef1bd2-aea6-5d08-ac9b-878038b0e24d">
+                      <File Id="File_706" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Amsterdam" />
+                      <File Id="File_707" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Andorra" />
+                      <File Id="File_708" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Astrakhan" />
+                      <File Id="File_709" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Athens" />
+                      <File Id="File_710" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Belfast" />
+                      <File Id="File_711" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Belgrade" />
+                      <File Id="File_712" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Berlin" />
+                      <File Id="File_713" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Bratislava" />
+                      <File Id="File_714" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Brussels" />
+                      <File Id="File_715" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Bucharest" />
+                      <File Id="File_716" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Budapest" />
+                      <File Id="File_717" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Busingen" />
+                      <File Id="File_718" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Chisinau" />
+                      <File Id="File_719" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Copenhagen" />
+                      <File Id="File_720" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Dublin" />
+                      <File Id="File_721" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Gibraltar" />
+                      <File Id="File_722" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Guernsey" />
+                      <File Id="File_723" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Helsinki" />
+                      <File Id="File_724" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Isle_of_Man" />
+                      <File Id="File_725" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Istanbul" />
+                      <File Id="File_726" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Jersey" />
+                      <File Id="File_727" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Kaliningrad" />
+                      <File Id="File_728" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Kiev" />
+                      <File Id="File_729" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Kirov" />
+                      <File Id="File_730" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Kyiv" />
+                      <File Id="File_731" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Lisbon" />
+                      <File Id="File_732" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Ljubljana" />
+                      <File Id="File_733" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\London" />
+                      <File Id="File_734" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Luxembourg" />
+                      <File Id="File_735" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Madrid" />
+                      <File Id="File_736" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Malta" />
+                      <File Id="File_737" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Mariehamn" />
+                      <File Id="File_738" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Minsk" />
+                      <File Id="File_739" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Monaco" />
+                      <File Id="File_740" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Moscow" />
+                      <File Id="File_741" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Nicosia" />
+                      <File Id="File_742" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Oslo" />
+                      <File Id="File_743" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Paris" />
+                      <File Id="File_744" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Podgorica" />
+                      <File Id="File_745" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Prague" />
+                      <File Id="File_746" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Riga" />
+                      <File Id="File_747" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Rome" />
+                      <File Id="File_748" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Samara" />
+                      <File Id="File_749" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\San_Marino" />
+                      <File Id="File_750" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Sarajevo" />
+                      <File Id="File_751" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Saratov" />
+                      <File Id="File_752" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Simferopol" />
+                      <File Id="File_753" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Skopje" />
+                      <File Id="File_754" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Sofia" />
+                      <File Id="File_755" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Stockholm" />
+                      <File Id="File_756" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Tallinn" />
+                      <File Id="File_757" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Tirane" />
+                      <File Id="File_758" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Tiraspol" />
+                      <File Id="File_759" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Ulyanovsk" />
+                      <File Id="File_760" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Uzhgorod" />
+                      <File Id="File_761" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Vaduz" />
+                      <File Id="File_762" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Vatican" />
+                      <File Id="File_763" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Vienna" />
+                      <File Id="File_764" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Vilnius" />
+                      <File Id="File_765" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Volgograd" />
+                      <File Id="File_766" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Warsaw" />
+                      <File Id="File_767" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Zagreb" />
+                      <File Id="File_768" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Zaporozhye" />
+                      <File Id="File_769" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Europe\Zurich" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_61" Name="Indian">
+                    <Component Id="CompSub_770" Guid="d73d885b-deca-5ea7-afc3-2cc4edb95ca2">
+                      <File Id="File_770" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Antananarivo" />
+                      <File Id="File_771" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Chagos" />
+                      <File Id="File_772" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Christmas" />
+                      <File Id="File_773" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Cocos" />
+                      <File Id="File_774" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Comoro" />
+                      <File Id="File_775" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Kerguelen" />
+                      <File Id="File_776" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Mahe" />
+                      <File Id="File_777" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Maldives" />
+                      <File Id="File_778" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Mauritius" />
+                      <File Id="File_779" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Mayotte" />
+                      <File Id="File_780" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Indian\Reunion" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_62" Name="Mexico">
+                    <Component Id="CompSub_781" Guid="e504ff1d-6470-5495-b2f8-5d8e9c3163c6">
+                      <File Id="File_781" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Mexico\BajaNorte" />
+                      <File Id="File_782" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Mexico\BajaSur" />
+                      <File Id="File_783" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Mexico\General" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_63" Name="Pacific">
+                    <Component Id="CompSub_784" Guid="44c3f867-8f64-55bd-823d-df24d2417caf">
+                      <File Id="File_784" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Apia" />
+                      <File Id="File_785" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Auckland" />
+                      <File Id="File_786" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Bougainville" />
+                      <File Id="File_787" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Chatham" />
+                      <File Id="File_788" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Chuuk" />
+                      <File Id="File_789" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Easter" />
+                      <File Id="File_790" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Efate" />
+                      <File Id="File_791" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Enderbury" />
+                      <File Id="File_792" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Fakaofo" />
+                      <File Id="File_793" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Fiji" />
+                      <File Id="File_794" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Funafuti" />
+                      <File Id="File_795" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Galapagos" />
+                      <File Id="File_796" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Gambier" />
+                      <File Id="File_797" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Guadalcanal" />
+                      <File Id="File_798" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Guam" />
+                      <File Id="File_799" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Honolulu" />
+                      <File Id="File_800" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Johnston" />
+                      <File Id="File_801" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Kanton" />
+                      <File Id="File_802" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Kiritimati" />
+                      <File Id="File_803" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Kosrae" />
+                      <File Id="File_804" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Kwajalein" />
+                      <File Id="File_805" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Majuro" />
+                      <File Id="File_806" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Marquesas" />
+                      <File Id="File_807" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Midway" />
+                      <File Id="File_808" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Nauru" />
+                      <File Id="File_809" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Niue" />
+                      <File Id="File_810" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Norfolk" />
+                      <File Id="File_811" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Noumea" />
+                      <File Id="File_812" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Pago_Pago" />
+                      <File Id="File_813" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Palau" />
+                      <File Id="File_814" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Pitcairn" />
+                      <File Id="File_815" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Pohnpei" />
+                      <File Id="File_816" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Ponape" />
+                      <File Id="File_817" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Port_Moresby" />
+                      <File Id="File_818" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Rarotonga" />
+                      <File Id="File_819" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Saipan" />
+                      <File Id="File_820" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Samoa" />
+                      <File Id="File_821" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Tahiti" />
+                      <File Id="File_822" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Tarawa" />
+                      <File Id="File_823" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Tongatapu" />
+                      <File Id="File_824" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Truk" />
+                      <File Id="File_825" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Wake" />
+                      <File Id="File_826" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Wallis" />
+                      <File Id="File_827" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\Pacific\Yap" />
+                    </Component>
+                  </Directory>
+                  <Directory Id="Dir_64" Name="US">
+                    <Component Id="CompSub_828" Guid="ff0732fe-1c10-5ecb-952d-88701223b190">
+                      <File Id="File_828" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Alaska" />
+                      <File Id="File_829" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Aleutian" />
+                      <File Id="File_830" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Arizona" />
+                      <File Id="File_831" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Central" />
+                      <File Id="File_832" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\East-Indiana" />
+                      <File Id="File_833" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Eastern" />
+                      <File Id="File_834" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Hawaii" />
+                      <File Id="File_835" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Indiana-Starke" />
+                      <File Id="File_836" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Michigan" />
+                      <File Id="File_837" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Mountain" />
+                      <File Id="File_838" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Pacific" />
+                      <File Id="File_839" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\tzdata\zoneinfo\US\Samoa" />
+                    </Component>
+                  </Directory>
+                </Directory>
+              </Directory>
+              <Directory Id="Dir_65" Name="watchfiles">
+                <Component Id="CompSub_840" Guid="9def37b1-f174-513e-935c-4dd8691cff60">
+                  <File Id="File_840" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\watchfiles\_rust_notify.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_66" Name="websockets">
+                <Component Id="CompSub_841" Guid="8b159872-1614-5586-aa0e-bed38859e606">
+                  <File Id="File_841" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets\speedups.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_67" Name="websockets-15.0.1.dist-info">
+                <Component Id="CompSub_842" Guid="a5ea3732-0202-59cf-af0c-2ff0418567b5">
+                  <File Id="File_842" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\INSTALLER" />
+                  <File Id="File_843" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\LICENSE" />
+                  <File Id="File_844" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\METADATA" />
+                  <File Id="File_845" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\RECORD" />
+                  <File Id="File_846" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\WHEEL" />
+                  <File Id="File_847" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\entry_points.txt" />
+                  <File Id="File_848" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\websockets-15.0.1.dist-info\top_level.txt" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_68" Name="werkzeug-3.1.3.dist-info">
+                <Component Id="CompSub_849" Guid="e7860b7a-07ce-592a-a3b8-3fe0e0549f38">
+                  <File Id="File_849" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\INSTALLER" />
+                  <File Id="File_850" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\LICENSE.txt" />
+                  <File Id="File_851" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\METADATA" />
+                  <File Id="File_852" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\RECORD" />
+                  <File Id="File_853" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\REQUESTED" />
+                  <File Id="File_854" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\WHEEL" />
+                  <File Id="File_855" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\werkzeug-3.1.3.dist-info\direct_url.json" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_69" Name="win32">
+                <Component Id="CompSub_856" Guid="0313c582-7eea-5428-b2f3-2b27f91e1c5b">
+                  <File Id="File_856" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\win32\win32api.pyd" />
+                  <File Id="File_857" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\win32\win32evtlog.pyd" />
+                </Component>
+              </Directory>
+              <Directory Id="Dir_70" Name="yaml">
+                <Component Id="CompSub_858" Guid="74d701e4-3b75-5ef2-bad7-32dddd7cc9d1">
+                  <File Id="File_858" Source="C:\Spotify_new_Music_Player\dist\Music\_internal\yaml\_yaml.cp313-win_amd64.pyd" />
+                </Component>
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      <Directory Id="ProgramMenuFolder" Name="Programs" />
+    </Directory>
+
+    <Feature Id="MainFeature" Title="Music" Level="1">
+      <ComponentRef Id="CompRoot_1" />
+      <ComponentRef Id="CompSub_2" />
+      <ComponentRef Id="CompSub_78" />
+      <ComponentRef Id="CompSub_86" />
+      <ComponentRef Id="CompSub_88" />
+      <ComponentRef Id="CompSub_94" />
+      <ComponentRef Id="CompSub_95" />
+      <ComponentRef Id="CompSub_96" />
+      <ComponentRef Id="CompSub_97" />
+      <ComponentRef Id="CompSub_99" />
+      <ComponentRef Id="CompSub_101" />
+      <ComponentRef Id="CompSub_105" />
+      <ComponentRef Id="CompSub_106" />
+      <ComponentRef Id="CompSub_107" />
+      <ComponentRef Id="CompSub_113" />
+      <ComponentRef Id="CompSub_116" />
+      <ComponentRef Id="CompSub_118" />
+      <ComponentRef Id="CompSub_125" />
+      <ComponentRef Id="CompSub_126" />
+      <ComponentRef Id="CompSub_133" />
+      <ComponentRef Id="CompSub_138" />
+      <ComponentRef Id="CompSub_140" />
+      <ComponentRef Id="CompSub_141" />
+      <ComponentRef Id="CompSub_143" />
+      <ComponentRef Id="CompSub_149" />
+      <ComponentRef Id="CompSub_150" />
+      <ComponentRef Id="CompSub_216" />
+      <ComponentRef Id="CompSub_219" />
+      <ComponentRef Id="CompSub_221" />
+      <ComponentRef Id="CompSub_222" />
+      <ComponentRef Id="CompSub_228" />
+      <ComponentRef Id="CompSub_229" />
+      <ComponentRef Id="CompSub_230" />
+      <ComponentRef Id="CompSub_231" />
+      <ComponentRef Id="CompSub_232" />
+      <ComponentRef Id="CompSub_235" />
+      <ComponentRef Id="CompSub_236" />
+      <ComponentRef Id="CompSub_287" />
+      <ComponentRef Id="CompSub_341" />
+      <ComponentRef Id="CompSub_484" />
+      <ComponentRef Id="CompSub_497" />
+      <ComponentRef Id="CompSub_505" />
+      <ComponentRef Id="CompSub_507" />
+      <ComponentRef Id="CompSub_510" />
+      <ComponentRef Id="CompSub_522" />
+      <ComponentRef Id="CompSub_523" />
+      <ComponentRef Id="CompSub_622" />
+      <ComponentRef Id="CompSub_634" />
+      <ComponentRef Id="CompSub_657" />
+      <ComponentRef Id="CompSub_661" />
+      <ComponentRef Id="CompSub_669" />
+      <ComponentRef Id="CompSub_671" />
+      <ComponentRef Id="CompSub_706" />
+      <ComponentRef Id="CompSub_770" />
+      <ComponentRef Id="CompSub_781" />
+      <ComponentRef Id="CompSub_784" />
+      <ComponentRef Id="CompSub_828" />
+      <ComponentRef Id="CompSub_840" />
+      <ComponentRef Id="CompSub_841" />
+      <ComponentRef Id="CompSub_842" />
+      <ComponentRef Id="CompSub_849" />
+      <ComponentRef Id="CompSub_856" />
+      <ComponentRef Id="CompSub_858" />
+    </Feature>
+  </Product>
+</Wix>

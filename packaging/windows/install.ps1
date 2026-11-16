@@ -1,4 +1,4 @@
-﻿# ==============================================================================
+# ==============================================================================
 # Music App - Windows Package Manager & Automated Installer
 # Usage:
 #   powershell -ExecutionPolicy Bypass -File install.ps1

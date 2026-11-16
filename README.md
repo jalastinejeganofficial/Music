@@ -34,7 +34,8 @@ A full-stack web scraper and music player built with Python FastAPI and modern J
 
 Music is packaged as standalone desktop software for **Windows**, **Linux**, and **macOS**, featuring a native desktop application window (dark theme `#0a0a0a`, custom app icon, no background terminal window, and zero Python setup required for end users):
 
-- **🪟 Windows (`.exe`, Package Manager & Portable `.zip`):**
+- **🪟 Windows (`.msi`, `.exe`, Package Manager & Portable `.zip`):**
+  - **Native Windows Installer (MSI):** [`dist/Music.msi`](dist/Music.msi) (native Microsoft Windows Installer with desktop icon & Start menu integration)
   - **Automated Package Manager & Installer:** [`dist/MusicSetup.exe`](dist/MusicSetup.exe) (single-file installer GUI that downloads/installs files, creates shortcuts, and automatically launches both frontend & backend software)
   - **1-Click Setup Script:** Run [`setup.bat`](setup.bat) or [packaging/windows/setup.bat](packaging/windows/setup.bat)
   - **PowerShell Web One-Liner:**

@@ -27,9 +27,10 @@ hiddenimports = [
     'yt_dlp',
     'yt_dlp.extractor',
     'bs4',
-    'webview',
-    'clr_loader',
-    'pythonnet'
+    'server',
+    'scraper',
+    'lyrics',
+    'search'
 ]
 
 excludes = [
@@ -63,7 +64,11 @@ excludes = [
     'PyQt6',
     'PySide2',
     'PySide6',
-    'qtpy'
+    'qtpy',
+    'clr',
+    'pythonnet',
+    'clr_loader',
+    'webview'
 ]
 
 # Pick icon based on platform

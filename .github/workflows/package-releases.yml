@@ -38,12 +38,13 @@ jobs:
           pip install pyinstaller pywebview pillow
 
       # --- WINDOWS BUILD & PACKAGE MANAGER ---
-      - name: Build Windows Executables & Package Manager
+      - name: Build Windows Executables, MSI & Package Manager
         if: runner.os == 'Windows'
         run: |
           pyinstaller --noconfirm --clean Music.spec
           python packaging/windows/create_portable_zip.py
           pyinstaller --noconfirm --clean --onefile --noconsole --name MusicSetup --icon assets/icon.ico --add-data "assets;assets" packaging/windows/installer_app.py
+          python packaging/windows/build_msi.py
           if (Get-Command iscc -ErrorAction SilentlyContinue) {
             iscc packaging/windows/Music_Installer.iss
           } elseif (Test-Path "C:\Program Files (x86)\Inno Setup 6\iscc.exe") {
@@ -86,6 +87,7 @@ jobs:
           name: Music-Windows-x64
           path: |
             dist/Music-Windows-x64.zip
+            dist/Music.msi
             dist/MusicSetup.exe
             dist/Music-Setup-x64.exe
 
@@ -104,6 +106,7 @@ jobs:
             dist/*.zip
             dist/*.tar.gz
             dist/*.exe
+            dist/*.msi
             dist/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
